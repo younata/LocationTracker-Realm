@@ -23,6 +23,9 @@
 		89DE37CA1C1944DD000012B4 /* LocationTrackerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DE37C91C1944DC000012B4 /* LocationTrackerSpec.swift */; };
 		89DE37CC1C194FE9000012B4 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DE37CB1C194FE9000012B4 /* DataStore.swift */; };
 		89DE37CE1C1955C3000012B4 /* DataStoreSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DE37CD1C1955C3000012B4 /* DataStoreSpec.swift */; };
+		89DE37D01C1B6C3C000012B4 /* MapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DE37CF1C1B6C3C000012B4 /* MapCoordinator.swift */; };
+		89DE37D21C1B7112000012B4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89DE37D11C1B7112000012B4 /* MapKit.framework */; };
+		89DE37D41C1B72FD000012B4 /* MapCoordinatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DE37D31C1B72FD000012B4 /* MapCoordinatorSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,9 @@
 		89DE37C91C1944DC000012B4 /* LocationTrackerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTrackerSpec.swift; sourceTree = "<group>"; };
 		89DE37CB1C194FE9000012B4 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		89DE37CD1C1955C3000012B4 /* DataStoreSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStoreSpec.swift; sourceTree = "<group>"; };
+		89DE37CF1C1B6C3C000012B4 /* MapCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapCoordinator.swift; sourceTree = "<group>"; };
+		89DE37D11C1B7112000012B4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		89DE37D31C1B72FD000012B4 /* MapCoordinatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapCoordinatorSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89DE37C41C1943F3000012B4 /* Realm.framework in Frameworks */,
+				89DE37D21C1B7112000012B4 /* MapKit.framework in Frameworks */,
 				89DE37C51C1943F3000012B4 /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,6 +103,7 @@
 		89DE37871C19427D000012B4 = {
 			isa = PBXGroup;
 			children = (
+				89DE37D11C1B7112000012B4 /* MapKit.framework */,
 				89DE37BA1C1943BF000012B4 /* Nimble.framework */,
 				89DE37BB1C1943BF000012B4 /* Quick.framework */,
 				89DE37BC1C1943BF000012B4 /* Realm.framework */,
@@ -120,6 +128,7 @@
 			children = (
 				89DE37931C19427D000012B4 /* AppDelegate.swift */,
 				89DE37951C19427D000012B4 /* ViewController.swift */,
+				89DE37CF1C1B6C3C000012B4 /* MapCoordinator.swift */,
 				89DE37C71C194440000012B4 /* LocationTracker.swift */,
 				89DE37CB1C194FE9000012B4 /* DataStore.swift */,
 				89DE379A1C19427D000012B4 /* Assets.xcassets */,
@@ -133,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				89DE37C91C1944DC000012B4 /* LocationTrackerSpec.swift */,
+				89DE37D31C1B72FD000012B4 /* MapCoordinatorSpec.swift */,
 				89DE37CD1C1955C3000012B4 /* DataStoreSpec.swift */,
 				89DE37AA1C19427D000012B4 /* Info.plist */,
 			);
@@ -190,6 +200,14 @@
 				TargetAttributes = {
 					89DE378F1C19427D000012B4 = {
 						CreatedOnToolsVersion = 7.2;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					89DE37A31C19427D000012B4 = {
 						CreatedOnToolsVersion = 7.2;
@@ -256,6 +274,7 @@
 				89DE37CC1C194FE9000012B4 /* DataStore.swift in Sources */,
 				89DE37941C19427D000012B4 /* AppDelegate.swift in Sources */,
 				89DE37C81C194440000012B4 /* LocationTracker.swift in Sources */,
+				89DE37D01C1B6C3C000012B4 /* MapCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +284,7 @@
 			files = (
 				89DE37CE1C1955C3000012B4 /* DataStoreSpec.swift in Sources */,
 				89DE37CA1C1944DD000012B4 /* LocationTrackerSpec.swift in Sources */,
+				89DE37D41C1B72FD000012B4 /* MapCoordinatorSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
